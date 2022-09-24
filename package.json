@@ -1,0 +1,33 @@
+{
+  "name": "new-sunshine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "cheerio": "^1.0.0-rc.10",
+    "clsx": "^1.1.1",
+    "framer-motion": "^4.1.17",
+    "got": "^11.8.3",
+    "hpagent": "^0.1.2",
+    "link-preview-js": "^2.1.13",
+    "mongodb": "^3.7.3",
+    "next": "^12.0.10",
+    "node-fetch": "^2.6.1",
+    "pdfjs-dist": "^2.12.313",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-player": "^2.7.2",
+    "scrape-youtube": "^2.1.14",
+    "tunnel": "^0.0.6"
+  },
+  "author": "",
+  "license": "ISC"
+}
