@@ -107,7 +107,7 @@ export default function MyDrawer(props) {
         <Toolbar>
           <Link href="/">
             <Typography variant="h6" className={classes.logo} noWrap>
-              Insights
+              Minitools
             </Typography>
           </Link>
         </Toolbar>
