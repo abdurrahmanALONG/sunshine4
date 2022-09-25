@@ -29,9 +29,6 @@ export default function AddVideo(props) {
     <div>
       <form onSubmit={e=>{handleSubmit(e)}} style={{width: '350px', margin:"20px auto"}}>
         <TextField id="videoLink" label={`Add ${props.cat} Video`} style={{width: '100%'}} variant="outlined" />
-        <Button type="submit" size="small" variant="contained" color="primary">
-          submit
-        </Button>
       </form>
       <h4>{message}</h4>
     </div>
