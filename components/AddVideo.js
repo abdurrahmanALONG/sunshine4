@@ -1,12 +1,16 @@
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import Button from '@material-ui/core/Button';
+import React from 'react';
 
 export default function AddVideo(props) {
   const [message, setMessage] = useState("");
-  
+
   const router = useRouter();
+  const refreshData = () => {
+    router.replace(router.asPath + '#videos');
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,13 +27,13 @@ export default function AddVideo(props) {
     })
     const status = await response.text()
     setMessage(status)
-    router.reload(window.location.pathname)
+    refreshData()
   }
 
   return (
     <div>
-      <form onSubmit={e=>{handleSubmit(e)}} style={{width: '350px', margin:"20px auto"}}>
-        <TextField id="videoLink" label={`Add ${props.cat} Video`} style={{width: '100%'}} variant="outlined" />
+      <form onSubmit={e => { handleSubmit(e) }} style={{ width: '350px', display: 'flex', justifyContent: "space-evenly", margin: "20px auto" }}>
+        <TextField required id="videoLink" label={`Add ${props.cat} Video`} style={{ width: '100%', marginRight: '10px' }} variant="outlined" />
         <Button type="submit" size="small" variant="contained" color="primary">
           submit
         </Button>
